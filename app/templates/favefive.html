@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <h1>These are my favorite five artists:</h1>
+    <ul>
+        {% for name in my_list %} 
+            {% if name == "Wizkid" %}
+                <li><b> {{ name }}</li></b>
+            {% else %}
+            <li><i>{{ name }}</i></li>
+            {% endif %}
+        {% endfor %}
+
+    </ul>
+
+{% endblock content %}
